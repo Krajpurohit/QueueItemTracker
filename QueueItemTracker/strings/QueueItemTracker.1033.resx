@@ -121,7 +121,7 @@
     <value>Queue Item Tracker</value>
     <comment/>
   </data>
-  <data name="QueueItemTracker_Disc_key" xml:space="preserve">
+  <data name="QueueItemTracker_Desc_key" xml:space="preserve">
     <value>Show case status changes and queue item histories in a flow chart</value>
     <comment/>
   </data>
