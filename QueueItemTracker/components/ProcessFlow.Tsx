@@ -84,6 +84,8 @@ export const ProcessFlow = (props: IProcessFlow) => {
         setCards(cards);
         setAllCards(cards);
         setIsShowFlow(true);
+        setMessageBarText("");
+        setIsMessageBarVisisble(false);
       }
       else {
         setMessageBarText(props.pcfContext.resources.getString(ResourceKeys.INFO_AUDIT_RECORDS_NOT_FOUND));
