@@ -51,6 +51,7 @@ export class auditService {
 		  <attribute name="${Entities.Audit.attributes.action}" />
 		  <attribute name="${Entities.Audit.attributes.objectId}" />
 		  <attribute name="${Entities.Audit.attributes.objectTypeCode}" />
+          <attribute name="${Entities.Audit.attributes.attributeMask}" />
 		  <filter type="or" >		  
 		  <condition attribute="${Entities.Audit.attributes.objectId}" operator="eq" value="${this.primaryEntityId}" />
 			${queueItemConditions}  </filter>
