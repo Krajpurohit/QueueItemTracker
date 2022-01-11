@@ -78,7 +78,7 @@ export class auditService {
             changeHistories.push(changeHistory);
         });
         //@ts-ignore
-        let allChanges = requests !== [] ? await this.context.webAPI.executeMultiple(requests) : [];
+        let allChanges = requests.length >0 ? await this.context.webAPI.executeMultiple(requests) : [];
         allChanges.forEach(async (change: any, index: number) => {
             let record = await change.json();
             changeHistories[index].details = record;
