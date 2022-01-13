@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
     Microsoft ResX Schema
@@ -60,45 +60,45 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,116 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="QueueItemTracker_Display_key" xml:space="preserve">
-    <value>Queue Item Tracker</value>
-    <comment/>
+  <data name="ACTION_NEW" xml:space="preserve">
+    <value>Novi</value>
   </data>
-  <data name="QueueItemTracker_Desc_key" xml:space="preserve">
-    <value>Show case status changes and queue item histories in a flow chart</value>
-    <comment/>
+  <data name="ACTION_PICKED" xml:space="preserve">
+    <value>Odabrano</value>
   </data>
-  <data name="Property_Display_Key" xml:space="preserve">
-    <value>Dummy Field</value>
-    <comment/>
+  <data name="ACTION_RELEASED" xml:space="preserve">
+    <value>Oslobođen</value>
+  </data>
+  <data name="ACTION_REMOVED" xml:space="preserve">
+    <value>Uklonjeno</value>
+  </data>
+  <data name="ACTION_STATUS_CHANGED" xml:space="preserve">
+    <value>Status promijenjen</value>
+  </data>
+  <data name="ACTION_TRANSFERRED_QUEUE" xml:space="preserve">
+    <value>Prebačeno u drugi red čekanja</value>
+  </data>
+  <data name="ACTION_TRANSFERRED_USER" xml:space="preserve">
+    <value>Prebačeno na drugog korisnika</value>
+  </data>
+  <data name="BUTTON_TEXT" xml:space="preserve">
+    <value>Generiraj tijek</value>
+  </data>
+  <data name="BUTTON_TEXT_RENDER" xml:space="preserve">
+    <value>Ponovno generirajte protok</value>
+  </data>
+  <data name="CASE_AUDIT_TOGGLE_LABEL" xml:space="preserve">
+    <value>Sakrij promjene velikih i malih slova</value>
+  </data>
+  <data name="ERROR_AUDIT_ACCESS_MISSING" xml:space="preserve">
+    <value>Nemate pristup čitanju povijesti revizije.</value>
+  </data>
+  <data name="ERROR_AUDIT_DISABLED" xml:space="preserve">
+    <value>Revizija je onemogućena na entitetima Predmet ili Stavka čekanja.</value>
+  </data>
+  <data name="ERROR_AUDIT_DISABLED_SYS" xml:space="preserve">
+    <value>Revizija nije omogućena u ovom okruženju.</value>
+  </data>
+  <data name="ERROR_AUTOPOST_NOTFOUND" xml:space="preserve">
+    <value>Nije pronađena konfiguracija objave koja stvara automatsku objavu kad god se slučaj doda u red čekanja.</value>
+  </data>
+  <data name="ERROR_GENERIC" xml:space="preserve">
+    <value>Nije moguće generirati protok</value>
+  </data>
+  <data name="ERROR_POST_ACCESS_MISSING" xml:space="preserve">
+    <value>Nemate pristup čitanju postova.</value>
+  </data>
+  <data name="INFO_AUDIT_RECORDS_NOT_FOUND" xml:space="preserve">
+    <value>Za ovaj zapis još nema kreiranih revizijskih zapisa.</value>
+  </data>
+  <data name="PROGRESS_BAR_DESC" xml:space="preserve">
+    <value>Generiranje praćenja stavki u redu za ovaj zapis.</value>
+  </data>
+  <data name="PROGRESS_BAR_LABEL" xml:space="preserve">
+    <value>Molimo pričekajte...</value>
   </data>
   <data name="Property_Desc_Key" xml:space="preserve">
     <value>Dummy Field</value>
-    <comment/>
   </data>
-  <data name="ERROR_AUDIT_DISABLED" xml:space="preserve">
-    <value>Audit is disabled on Case or Queue Item entities.</value>
-    <comment/>
-  </data>
-  <data name="ERROR_AUTOPOST_NOTFOUND" xml:space="preserve">
-    <value>Post config that creates an auto post whenever a Case gets added to queue is not found.</value>
-    <comment/>
-  </data>
-  <data name="ERROR_AUDIT_ACCESS_MISSING" xml:space="preserve">
-    <value>You don't have access to read audit history.</value>
-    <comment/>
-  </data>
-  <data name="INFO_AUDIT_RECORDS_NOT_FOUND" xml:space="preserve">
-    <value>There are no audit records created for this record yet.</value>
-    <comment/>
-  </data>
-  <data name="CASE_AUDIT_TOGGLE_LABEL" xml:space="preserve">
-    <value>Hide Case Changes</value>
-    <comment/>
-  </data>
-  <data name="PROGRESS_BAR_LABEL" xml:space="preserve">
-    <value>Please wait...</value>
-    <comment/>
-  </data>
-  <data name="PROGRESS_BAR_DESC" xml:space="preserve">
-    <value>Generating Queue Item Tracker for this record.</value>
-    <comment/>
+  <data name="Property_Display_Key" xml:space="preserve">
+    <value>Dummy Field</value>
   </data>
   <data name="QUEUEITEM_AUDIT_TOGGLE_LABEL" xml:space="preserve">
-    <value>Hide Queue Item Changes</value>
-    <comment/>
+    <value>Sakrij promjene stavki u redu čekanja</value>
   </data>
-  <data name="BUTTON_TEXT" xml:space="preserve">
-    <value>Generate Flow</value>
-    <comment/>
+  <data name="QueueItemTracker_Desc_key" xml:space="preserve">
+    <value>Prikažite promjene statusa predmeta i povijesti stavki u redu čekanja u dijagramu toka</value>
   </data>
-  <data name="BUTTON_TEXT_RENDER" xml:space="preserve">
-    <value>Re-generate Flow</value>
-    <comment/>
-  </data>
-  <data name="ERROR_GENERIC" xml:space="preserve">
-    <value>Unable to generate flow</value>
-    <comment/>
+  <data name="QueueItemTracker_Display_key" xml:space="preserve">
+    <value>Praćenje stavki u redu čekanja</value>
   </data>
   <data name="RECORD_NOT_CREATED" xml:space="preserve">
-    <value>Please save this record to use this control</value>
-    <comment/>
-  </data>
-  <data name="ERROR_AUDIT_DISABLED_SYS" xml:space="preserve">
-    <value>Audit is not enabled on this environment.</value>
-    <comment/>
-  </data>
-  <data name="ERROR_POST_ACCESS_MISSING" xml:space="preserve">
-    <value>You don't have access to read posts.</value>
-    <comment/>
-  </data>
-  <data name="ACTION_NEW" xml:space="preserve">
-    <value>New</value>
-    <comment/>
-  </data>
-  <data name="ACTION_STATUS_CHANGED" xml:space="preserve">
-    <value>Status Changed</value>
-    <comment/>
-  </data>
-  <data name="ACTION_REMOVED" xml:space="preserve">
-    <value>Removed</value>
-    <comment/>
-  </data>
-  <data name="ACTION_TRANSFERRED_USER" xml:space="preserve">
-    <value>Transferred To Another User</value>
-    <comment/>
-  </data>
-  <data name="ACTION_TRANSFERRED_QUEUE" xml:space="preserve">
-    <value>Transferred To Another Queue</value>
-    <comment/>
-  </data>
-  <data name="ACTION_PICKED" xml:space="preserve">
-    <value>Picked</value>
-    <comment/>
-  </data>
-  <data name="ACTION_RELEASED" xml:space="preserve">
-    <value>Released</value>
-    <comment/>
+    <value>Spremite ovaj zapis da biste koristili ovu kontrolu</value>
   </data>
   <data name="TRANSITION_STATUS_CHANGED" xml:space="preserve">
-    <value>Moved to {0}</value>
-    <comment/>
-  </data>
-  <data name="HOVERCARD_WORKEDBY_LABEL" xml:space="preserve">
-    <value>Worked By</value>
-    <comment/>
+    <value>Premješteno na {0}</value>
   </data>
   <data name="HOVERCARD_QUEUE_LABEL" xml:space="preserve">
-    <value>Queue</value>
-    <comment/>
+    <value>Red</value>
+  </data>
+  <data name="HOVERCARD_WORKEDBY_LABEL" xml:space="preserve">
+    <value>Radio je</value>
   </data>
 </root>

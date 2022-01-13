@@ -12,7 +12,17 @@ export const ResourceKeys = {
     ERROR_GENERIC: "ERROR_GENERIC",
     RECORD_NOT_CREATED:"RECORD_NOT_CREATED",
     ERROR_AUDIT_DISABLED_SYS:"ERROR_AUDIT_DISABLED_SYS",
-    ERROR_POST_ACCESS_MISSING:"ERROR_POST_ACCESS_MISSING"
+    ERROR_POST_ACCESS_MISSING:"ERROR_POST_ACCESS_MISSING",
+    ACTION_NEW:"ACTION_NEW",
+    ACTION_STATUS_CHANGED:"ACTION_STATUS_CHANGED",
+    ACTION_REMOVED:"ACTION_REMOVED",
+    ACTION_TRANSFERRED_USER:"ACTION_TRANSFERRED_USER",
+    ACTION_TRANSFERRED_QUEUE:"ACTION_TRANSFERRED_QUEUE",
+    ACTION_PICKED:"ACTION_PICKED",
+    ACTION_RELEASED:"ACTION_RELEASED",
+    TRANSITION_STATUS_CHANGED:"TRANSITION_STATUS_CHANGED",
+    HOVERCARD_WORKEDBY_LABEL:"HOVERCARD_WORKEDBY_LABEL",
+    HOVERCARD_QUEUE_LABEL:"HOVERCARD_QUEUE_LABEL"
 } as const
 
 export const Entities = {
@@ -76,16 +86,20 @@ export const Entities = {
 export const Action = {
     addToQueue: {
         name: "Add To Queue",
-        value: "52"
+        value: 52
     },
     create: {
         name: "Create",
+        value:1
     },
     update: {
-        name: "Update"
+        name: "Update",
+        value :2
     },
     delete: {
-        name: "Delete"
+        name: "Delete",
+        value:3
+
     }
 } as const
 

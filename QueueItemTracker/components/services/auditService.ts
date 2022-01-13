@@ -5,6 +5,7 @@ import { RetrieveAuditDetails } from "../helpers/WebApiHelper";
 export interface IChangeHistory {
     auditId: string;
     action: string;
+    actionValue:number;
     entity: string;
     createdOn: string;
     createdBy: ComponentFramework.LookupValue;
@@ -70,6 +71,7 @@ export class auditService {
             let request = new RetrieveAuditDetails(entity);
             requests.push(request);
             changeHistory.auditId = audit[Entities.Audit.attributes.auditId];
+            changeHistory.actionValue=audit[Entities.Audit.attributes.action];
             changeHistory.action = audit[Entities.Audit.attributes.actionFormattedValue];
             changeHistory.entity = audit[Entities.Audit.attributes.objectTypeCode];
             changeHistory.createdOn = audit[Entities.Audit.attributes.createdOn];
@@ -99,7 +101,7 @@ export class auditService {
 			</filter>`;
         });
         queueItemDateConditions = queueItemDateConditions !== "" ? `
-		<filter type="and"><condition attribute="${Entities.Audit.attributes.action}" operator="eq" value="${Action.addToQueue.value}"/><filter type="or">${queueItemDateConditions}</filter></filter>` : "";
+		<filter type="and"><condition attribute="${Entities.Audit.attributes.action}" operator="eq" value="${Action.addToQueue.value.toString()}"/><filter type="or">${queueItemDateConditions}</filter></filter>` : "";
         if (queueItemDateConditions != "") {
             let fetchXml = `<fetch>
 		<entity name="${Entities.Audit.logicalName}" >

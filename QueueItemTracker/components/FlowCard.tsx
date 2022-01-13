@@ -7,6 +7,7 @@ import { HoverCard, HoverCardType, IHoverCardProps } from "@fluentui/react/lib/c
 import { DefaultPalette } from "@fluentui/style-utilities/lib/styles/DefaultPalette";
 import { IInputs } from "../generated/ManifestTypes";
 import {PersonaHoverCard} from "./PersonaHoverCard";
+import { ResourceKeys } from "./helpers/Constants";
 
 
 export interface IFlowCard {
@@ -28,10 +29,10 @@ export const FlowCard = (props: IFlowCard) => {
         border: `1px solid ${DefaultPalette.themeSecondary}`
       }}}>
         <Stack.Item>
-          <PersonaHoverCard item={props.workedBy} label="Worked By : " pcfContext={props.pcfContext} />
+          <PersonaHoverCard item={props.workedBy} label={props.pcfContext.resources.getString(ResourceKeys.HOVERCARD_WORKEDBY_LABEL)} pcfContext={props.pcfContext} />
         </Stack.Item>
         <Stack.Item>
-        <PersonaHoverCard item={props.queue} label="Queue : " pcfContext={props.pcfContext} />
+        <PersonaHoverCard item={props.queue} label={props.pcfContext.resources.getString(ResourceKeys.HOVERCARD_QUEUE_LABEL)} pcfContext={props.pcfContext} />
         </Stack.Item>
       </Stack>
       )

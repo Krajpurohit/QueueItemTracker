@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="K10" constructor="QueueItemTracker" version="0.0.4" display-name-key="QueueItemTracker_Display_key" description-key="QueueItemTracker_Desc_key" control-type="standard" >
+  <control namespace="K10" constructor="QueueItemTracker" version="0.0.5" display-name-key="QueueItemTracker_Display_key" description-key="QueueItemTracker_Desc_key" control-type="standard" >
     <external-service-usage enabled="false">
     </external-service-usage>
     <property name="dummyField" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
     <resources>
       <code path="index.ts" order="1"/>
       <resx path="strings/QueueItemTracker.1033.resx" version="1.0.0" />
-    </resources>
-    
+      <resx path="strings/QueueItemTracker.1025.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1026.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1027.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1028.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1029.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1030.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1031.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1032.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1035.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1036.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1037.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1038.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1040.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1041.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1042.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1043.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1044.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1045.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1046.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1048.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1049.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1050.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1051.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1053.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1054.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1055.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1057.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1058.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1060.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1061.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1062.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1063.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1066.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1069.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1081.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1086.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1087.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.1110.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.2052.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.2070.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.2074.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.3076.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.3082.resx" version="1.0.0" />
+      <resx path="strings/QueueItemTracker.3098.resx" version="1.0.0" />      
+    </resources>    
     <feature-usage>
       <uses-feature name="WebAPI" required="true" />
       <uses-feature name="Utility" required="true" />

@@ -1,6 +1,6 @@
 import { IInputs } from "../../generated/ManifestTypes";
 import { IFlowCard } from "../FlowCard";
-import { Action, AuditDetails, Entities } from "../helpers/Constants";
+import { Action, AuditDetails, Entities, ResourceKeys } from "../helpers/Constants";
 import { IChangeHistory } from "./auditService";
 
 export class historyDataService {
@@ -35,6 +35,11 @@ export class historyDataService {
         });
         return flowCards.length > 0 ? flowCards.filter(card=>card.action).map(flowCard => ({ ...flowCard, action: flowCard.action?.replace(" To Another Queue", "").replace(" To Another User", "") })) : [];
     }
+    stringFormat(text: string, ...args: string[]): string {
+        return text.replace(/{(\d+)}/g, (match, num) => {
+          return typeof args[num] !== 'undefined' ? args[num] : match;
+        });
+      }
     formatDate(date: string): string {
         let dateValue: any = new Date(date);
         let dateFormatting = this.context.userSettings.dateFormattingInfo;
@@ -42,7 +47,7 @@ export class historyDataService {
     }
     fetchTransitionStageLabel(history: IChangeHistory): string | undefined {
         let action = this.fetchAction(history);
-        if (action !== "Status Changed") {
+        if (action !== this.context.resources.getString(ResourceKeys.ACTION_STATUS_CHANGED)) {
             return action;
         }
         else {
@@ -50,7 +55,7 @@ export class historyDataService {
                 return history.details.AuditDetail.NewValue[AuditDetails.stateCodeFormattedValue];
             }
             else {
-                return `Moved to ${history.details.AuditDetail.NewValue[AuditDetails.statusCodeFormattedValue]}`
+                return this.stringFormat(this.context.resources.getString(ResourceKeys.TRANSITION_STATUS_CHANGED),history.details.AuditDetail.NewValue[AuditDetails.statusCodeFormattedValue]);
             }
         }
     }
@@ -79,38 +84,38 @@ export class historyDataService {
         }
     }
     fetchAction(history: IChangeHistory): string | undefined {
-        switch (history.action) {
-            case Action.create.name: {
-                return "New";
+        switch (history.actionValue) {
+            case Action.create.value: {
+                return this.context.resources.getString(ResourceKeys.ACTION_NEW);
                 break;
             }
-            case Action.addToQueue.name: {
+            case Action.addToQueue.value: {
                 return history.action;
                 break;
             }
-            case Action.update.name: {
+            case Action.update.value: {
                 if (history.entity === this.primaryEntity) {
-                    return "Status Changed"
+                    return this.context.resources.getString(ResourceKeys.ACTION_STATUS_CHANGED);
                 }
                 else {
                     if (Object.keys(history.details.AuditDetail.NewValue).indexOf(AuditDetails.workerIdValue) !== -1 && Object.keys(history.details.AuditDetail.OldValue).indexOf(AuditDetails.workerIdValue) === -1) {
-                        return "Picked";
+                        return this.context.resources.getString(ResourceKeys.ACTION_PICKED);
                     }
                     else if (Object.keys(history.details.AuditDetail.NewValue).indexOf(AuditDetails.workerIdValue) !== -1 && Object.keys(history.details.AuditDetail.OldValue).indexOf(AuditDetails.workerIdValue) !== -1) {
-                        return "Transferred To Another User";
+                        return this.context.resources.getString(ResourceKeys.ACTION_TRANSFERRED_USER);
                     }
                     else if (Object.keys(history.details.AuditDetail.NewValue).indexOf(AuditDetails.queueIdValue) !== -1 && Object.keys(history.details.AuditDetail.OldValue).indexOf(AuditDetails.queueIdValue) !== -1) {
-                        return "Transferred To Another Queue";
+                        return this.context.resources.getString(ResourceKeys.ACTION_TRANSFERRED_QUEUE);
                     }
                     if (Object.keys(history.details.AuditDetail.NewValue).indexOf(AuditDetails.workerIdValue) === -1 && Object.keys(history.details.AuditDetail.OldValue).indexOf(AuditDetails.workerIdValue) !== -1) {
-                        return "Released";
+                        return this.context.resources.getString(ResourceKeys.ACTION_RELEASED);
                     }
                 }
                 break;
             }
-            case Action.delete.name: {
+            case Action.delete.value: {
                 if (history.entity === Entities.QueueItem.logicalName) {
-                    return "Removed";
+                    return this.context.resources.getString(ResourceKeys.ACTION_REMOVED);
                     break
                 }
             }

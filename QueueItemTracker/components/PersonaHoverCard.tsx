@@ -24,7 +24,7 @@ export const PersonaHoverCard = (props: IPersonaHoverCard) => {
         }
     }
     return (
-        <Stack horizontal>
+        <Stack horizontal tokens={{childrenGap:10}}>
             <Stack.Item>
                 <Label>{props.label}</Label>
             </Stack.Item>
