@@ -7,6 +7,14 @@ export const ClassNames = mergeStyleSets({
     background: DefaultPalette.themePrimary,
     height: "1vh"
   },
+  arrowHeadRTL: {
+    transform:"rotate(180deg)",
+    width: "0",
+    height: "0",
+    borderTop: "2vh solid transparent",
+    borderBottom: "2vh solid transparent",
+    borderLeft: `3vh solid ${DefaultPalette.themePrimary}`
+  },
   arrowHead: {
     width: "0",
     height: "0",

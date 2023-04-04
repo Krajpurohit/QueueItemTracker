@@ -1,5 +1,5 @@
 import { Label } from "@fluentui/react/lib/components/Label";
-import { IPersonaSharedProps, Persona, PersonaSize } from "@fluentui/react/lib/components/Persona";
+import { Persona, PersonaSize } from "@fluentui/react/lib/components/Persona";
 import { Stack } from "@fluentui/react/lib/components/Stack";
 import * as React from "react";
 import { ClassNames } from "./ClassNames";
@@ -23,6 +23,7 @@ export interface IFlowCard {
 
 DefaultPalette.themeSecondary
 export const FlowCard = (props: IFlowCard) => {
+  const isRTL=props.pcfContext.userSettings.isRTL;
   const _onRenderPlainCard=()=>{
     return(
       <Stack tokens={{childrenGap:5,padding:5}} styles={{root:{
@@ -45,7 +46,7 @@ export const FlowCard = (props: IFlowCard) => {
     }
   }
   return (
-    <div>
+    <div dir={isRTL?"rtl":"ltr"}>
       <Stack horizontal>
         <Stack.Item>
           <Stack>
@@ -55,7 +56,7 @@ export const FlowCard = (props: IFlowCard) => {
             <Stack.Item>
               <Stack horizontal>
                 <div className={ClassNames.arrowTail}></div>
-                <div className={ClassNames.arrowHead}></div>
+                <div className={isRTL?ClassNames.arrowHeadRTL:ClassNames.arrowHead}></div>
               </Stack>
             </Stack.Item>
             <Stack.Item align="center">
