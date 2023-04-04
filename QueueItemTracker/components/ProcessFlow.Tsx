@@ -21,6 +21,7 @@ export interface IProcessFlow {
 
 export const ProcessFlow = (props: IProcessFlow) => {
   initializeIcons();
+  const isRTL=props.pcfContext.userSettings.isRTL;
   const [cards, setCards] = React.useState<IFlowCard[]>([]);
   const [allcards, setAllCards] = React.useState<IFlowCard[]>([]);
   const [isInProgress, setIsInProgress] = React.useState(false);
@@ -107,7 +108,7 @@ export const ProcessFlow = (props: IProcessFlow) => {
     }
   }, [props.primaryEntityId]);
   return (
-    <div className={ClassNames.Wrapper}>
+    <div className={ClassNames.Wrapper} dir={isRTL?"rtl":"ltr"}>
       <Stack tokens={{ childrenGap: 5, padding: 5 }}>{isMessageBarVisible &&
         <Stack.Item>
           <MessageBar isMultiline={true}>
